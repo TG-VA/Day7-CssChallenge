@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #264057;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  aspect-ratio: 1/1;
+  width: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  
+  transition: 500ms ease-in-out;
+  z-index: 1;
+  box-shadow: 10px 10px 48px 1px rgba(0, 0, 0, 0.4);
+}
+
+.active {
+  transform: translatex(50%);
+}
+
+/*  HEADER  */
+.header {
+  position: relative;
+  height: 20%;
+  width: 100%;
+  background-color: #5f98cd;
+  
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  place-items: center;
+  font-weight: 600;
+  font-size: 27px;
+  color: white;
+}
+
+.menu-icon {
+  position: relative;
+  width:45px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.dash-top {
+  width: 27px;
+  height: 5px;
+  top:0;
+  left:0;
+  background-color: #b2daff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+}
+
+.dash-bottom {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  top: 15px;
+  left: 0;
+  background-color: #b2daff;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dash-circle {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color:#b2daff;
+  border-radius: 50%;
+  top: -7%;
+  right: 10%;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-icon:hover .dash-top,
+.menu-icon:hover .dash-bottom,
+.menu-icon:hover .dash-circle {
+  background-color: white;
+}
+
+.bx-search {
+  font-size: 35px;
+  color: #b2daff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.bx-search:hover {
+  color: white;
+}
+
+.search {
+  position: absolute;
+  height: 50%;
+  width: 75%;
+  border-radius: 40px;
+  border: none;
+  opacity:0;
+  right: 15%;
+  transition: 300ms ease-in-out ;
+  font-size: 1.3rem;
+}
+
+.input {
+  transition: 300ms ease-in-out;
+  opacity: 100%;
+  right: 20%;
+  z-index: 2;
+}
+
+/*  HEADER  */
+
+/* BACKGROUND */
+.lista {
+  height: 90%;
+  width: 80%;
+  background-color: #43627d;
+  display: flex;
+  align-items: center;
+  transition: 500ms ease-in-out;
+  font-size: 20px;
+}
+
+.activo {
+  transform: translatex(-50px);
+  transition: 500ms ease-in-out;
+}
+
+.lista ul{
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #93b2cd;
+}
+
+.lista ul li {
+  padding: 20px;
+}
+
+.lista ul li:hover {
+  color: white;
+  background-color: #365066;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+/* BACKGROUND */
+
+/* NOTIFICATIONS */
+
+.notifications {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(116,116,166);
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 27px;
+  height: 80%;
+  bottom: 0;
+  width: 3px;
+  background-color: #ebebeb;
+}
+
+.notification {
+  height: 20%;
+  position: relative;
+  z-index: 2;
+  margin: 25px 20px 25px 43px;
+  opacity: 0;
+  animation: entrada ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+.notification:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.notification:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.notification:nth-child(4) {
+  animation-delay: 0.6s;
+}
+@keyframes entrada {
+  0% {
+    transform: translate3d(0,100px, 0);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.notification:hover {
+  color: #5f98cd;
+  cursor: pointer;
+}
+
+.circles {
+  box-sizing: border-box;
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid #5f98cd;
+  top: 2px;
+  left: -23px;
+}
+
+.time {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+
+.notification p {
+  font-size: 27px;
+  line-height: 30px;
+  margin: 0;
+}
+
+/* NOTIFICATIONS */
