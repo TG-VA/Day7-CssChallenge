@@ -18,7 +18,7 @@ You can watch this challenge live in my [Codepen](https://codepen.io/TristanVene
 
 ### 📄 Content
 **Notifications, Search and Menu:** The three cornerstones of any application? Brought together in the smallest possible space.
-**Developed with HTML and CSS VANILLA.**
+**Developed with HTML, CSS and JAVASCRIPT VANILLA.**
 
 ### ¿Qué es esto?
 
